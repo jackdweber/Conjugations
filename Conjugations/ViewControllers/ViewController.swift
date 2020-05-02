@@ -25,8 +25,9 @@ class ViewController: UIViewController {
         let request = NSFetchRequest<Conjugation>(entityName: "Conjugation")
         let reg = "^da.*"
         request.predicate = NSPredicate(format: "infinitive MATCHES[c] %@", reg)
-        if let res = try? context.fetch(request) {
-            print(res[0].infinitive!)
+        if let res = try? context.fetch(request), res.count > 0, let word = res[0].infinitive {
+            print(word)
+            return
         }
         
         // If there is a conjugations plist, upload to core data.
@@ -61,7 +62,7 @@ class ViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        self.performSegue(withIdentifier: "CjtnListSegue", sender: nil)
+        self.performSegue(withIdentifier: "StartSegue", sender: nil)
     }
 }
 
