@@ -100,7 +100,7 @@ class CjtnDetailViewController: UIViewController {
             }
             var ret = t.contains(tense)
             if form == "Perfect" {
-                ret = ret && t.contains("Perfect") || t.contains("Archaic")
+                ret = ret && ( t.contains("Perfect") || t.contains("Archaic") )
             } else {
                 ret = ret && t == tense
             }

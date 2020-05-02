@@ -20,5 +20,85 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C56A68F2-94E3-493E-8169-0DFB62A5E124"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Conjugations/ViewControllers/CjtnDetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
+            landmarkName = "getCjtnForTense(tense:mood:form:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C56A68F2-94E3-493E-8169-0DFB62A5E124 - c2fb149464ce6b42"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Conjugations.CjtnDetailViewController.getCjtnForTense(tense: Swift.String, mood: Swift.String, form: Swift.String) -&gt; Swift.Optional&lt;Conjugations.Conjugation&gt;"
+                  moduleName = "Conjugations"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jackweber/Desktop/Conjugations/Conjugations/ViewControllers/CjtnDetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "97"
+                  endingLineNumber = "97"
+                  offsetFromSymbolStart = "312">
+               </Location>
+               <Location
+                  uuid = "C56A68F2-94E3-493E-8169-0DFB62A5E124 - 83920ac9f5821491"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Conjugations.Conjugation) -&gt; Swift.Bool in Conjugations.CjtnDetailViewController.getCjtnForTense(tense: Swift.String, mood: Swift.String, form: Swift.String) -&gt; Swift.Optional&lt;Conjugations.Conjugation&gt;"
+                  moduleName = "Conjugations"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jackweber/Desktop/Conjugations/Conjugations/ViewControllers/CjtnDetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "98"
+                  endingLineNumber = "98"
+                  offsetFromSymbolStart = "333">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A982E529-FBD1-4DCF-AA67-FA38BFE2F705"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Conjugations/ViewControllers/CjtnDetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "getCjtnForTense(tense:mood:form:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "08D58D6B-4696-4CB7-9746-5B886EE02A9A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Conjugations/ViewControllers/CjtnDetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
+            landmarkName = "getCjtnForTense(tense:mood:form:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
