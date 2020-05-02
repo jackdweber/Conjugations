@@ -28,7 +28,7 @@ class TenseCVDS: NSObject, UICollectionViewDelegate, UICollectionViewDataSource 
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TenseCell", for: indexPath) as! TenseCellView
-        let label = UILabel(frame: CGRect())
+        let label = cell.label ?? UILabel(frame: .zero)
         cell.label = label
         label.translatesAutoresizingMaskIntoConstraints = false
         cell.contentView.translatesAutoresizingMaskIntoConstraints = false
@@ -42,8 +42,10 @@ class TenseCVDS: NSObject, UICollectionViewDelegate, UICollectionViewDataSource 
             cell.contentView.heightAnchor.constraint(equalTo: cell.heightAnchor, multiplier: 1),
             cell.widthAnchor.constraint(equalTo: cell.contentView.widthAnchor, multiplier: 1)
         ])
-        if indexPath.row == 0 && collectionView.indexPathsForSelectedItems == [[0, 0]] {
+        if indexPath.row == collectionView.indexPathsForSelectedItems?[0][1] ?? -1 {
             label.textColor = collectionView.tintColor
+        } else {
+            label.textColor = UIColor.black
         }
         return cell
     }
