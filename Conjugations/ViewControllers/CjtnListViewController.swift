@@ -19,7 +19,7 @@ class CjtnListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Verbos"
+        self.title = "Verbs"
         tableView.delegate = self
         tableView.dataSource = self
         searchBar.delegate = self
