@@ -20,7 +20,7 @@ class Translate: NSObject {
         let traceID = UUID().uuidString
         print("Creating request with trace \(traceID)")
         //let apiURL = "https://dev.microsofttranslator.com/translate?api-version=3.0&from=en&to=es"
-        let apiURL = "https://bricktranslate328.cognitiveservices.azure.com/translate?api-version=3.0&from=en&to=es"
+        let apiURL = "https://api.cognitive.microsofttranslator.com/translate?api-version=3.0&to=en&from=es"
         
         struct encodeText: Codable {
             var text = String()
@@ -40,6 +40,7 @@ class Translate: NSObject {
 
         request.httpMethod = "POST"
         request.addValue(azureKey, forHTTPHeaderField: "Ocp-Apim-Subscription-Key")
+        request.addValue("AustraliaEast", forHTTPHeaderField: "Ocp-Apim-Subscription-Region")
         request.addValue(contentType, forHTTPHeaderField: "Content-Type")
         request.addValue(traceID, forHTTPHeaderField: "X-ClientTraceID")
         request.addValue(String(describing: jsonToTranslate?.count), forHTTPHeaderField: "Content-Length")
@@ -72,10 +73,12 @@ class Translate: NSObject {
         }
         
         let jsonDecoder = JSONDecoder()
-        let langTranslations = try? jsonDecoder.decode(Array<ReturnedJson>.self, from: jsonData)
-        let numberOfTranslations = langTranslations!.count - 1
-        print(langTranslations!.count)
-        
-        completion(true, langTranslations![0].translations[numberOfTranslations].text)
+        if let langTranslations = try? jsonDecoder.decode(Array<ReturnedJson>.self, from: jsonData){
+            let numberOfTranslations = langTranslations.count - 1
+            print(langTranslations.count)
+            completion(true, langTranslations[0].translations[numberOfTranslations].text)
+        } else {
+            completion(false, "Translate: Got nothing")
+        }
     }
 }
