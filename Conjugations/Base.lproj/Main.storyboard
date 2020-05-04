@@ -183,8 +183,8 @@
                         <color key="selectedImageTintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="h7V-Ut-GlC" kind="relationship" relationship="viewControllers" id="ZTD-W5-5r3"/>
                         <segue destination="NH3-7a-q0e" kind="relationship" relationship="viewControllers" id="jFd-Ip-k3T"/>
+                        <segue destination="h7V-Ut-GlC" kind="relationship" relationship="viewControllers" id="ZTD-W5-5r3"/>
                         <segue destination="6ir-Uw-uEj" kind="relationship" relationship="viewControllers" id="4NV-1e-tup"/>
                     </connections>
                 </tabBarController>
@@ -223,7 +223,6 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Translate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="25" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sw4-Rs-f4D">
                                 <rect key="frame" x="20" y="64" width="374" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="IxE-mI-GZD"/>
                                     <constraint firstAttribute="height" constant="100" id="mLd-Oq-HfR"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="57"/>

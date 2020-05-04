@@ -40,7 +40,7 @@ class TranslateViewController: UIViewController {
         Translate.translate(phrase: text) { (status, res) in
             DispatchQueue.main.async {
                 if status {
-                    self.responseView.textColor = UIColor.black
+                    self.responseView.textColor = UIColor.label
                     self.responseView.text = res
                 } else {
                     self.responseView.textColor = UIColor.systemRed
@@ -53,7 +53,7 @@ class TranslateViewController: UIViewController {
 
 extension TranslateViewController: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        self.constraints[0].constant = self.searchViewTopStart
+        self.constraints[0].constant = searchViewTopStart + self.view.safeAreaInsets.top
         UIView.animate(withDuration: 0.3, animations: {
             self.view.layoutIfNeeded()
         })
