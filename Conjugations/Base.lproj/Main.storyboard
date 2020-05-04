@@ -48,7 +48,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2913" y="-8"/>
+            <point key="canvasLocation" x="-2974" y="325"/>
         </scene>
         <!--Study-->
         <scene sceneID="G9r-va-N0m">
@@ -183,13 +183,14 @@
                         <color key="selectedImageTintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="h7V-Ut-GlC" kind="relationship" relationship="viewControllers" id="ZTD-W5-5r3"/>
                         <segue destination="NH3-7a-q0e" kind="relationship" relationship="viewControllers" id="jFd-Ip-k3T"/>
+                        <segue destination="h7V-Ut-GlC" kind="relationship" relationship="viewControllers" id="ZTD-W5-5r3"/>
+                        <segue destination="6ir-Uw-uEj" kind="relationship" relationship="viewControllers" id="4NV-1e-tup"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iPz-8M-tF4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2096" y="-8"/>
+            <point key="canvasLocation" x="-1977" y="325"/>
         </scene>
         <!--Verbs-->
         <scene sceneID="yXu-E5-4LD">
@@ -210,6 +211,77 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lbg-ED-7kl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-962" y="289"/>
+        </scene>
+        <!--Translate-->
+        <scene sceneID="GRu-1f-t48">
+            <objects>
+                <viewController id="6ir-Uw-uEj" customClass="TranslateViewController" customModule="Conjugations" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="119-en-fZd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Translate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="25" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sw4-Rs-f4D">
+                                <rect key="frame" x="20" y="64" width="374" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="mLd-Oq-HfR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="57"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Palabra" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5U3-Ue-7y5">
+                                <rect key="frame" x="20" y="172" width="374" height="52.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="yes" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="textChange:" destination="6ir-Uw-uEj" eventType="editingChanged" id="YSe-d1-UBe"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbP-8t-Pqy">
+                                <rect key="frame" x="20" y="752" width="314" height="41"/>
+                                <string key="text" base64-UTF8="YES">
+VHJhbnNsYXRpb24gcHJvdmlkZWQgYnnigKhNaWNyb3NvZnQgQXp1cmUgVHJhbnNsYXRlIAPCrg
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SYw-Sh-XJD">
+                                <rect key="frame" x="20" y="232.5" width="374" height="511.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="cbP-8t-Pqy" firstAttribute="leading" secondItem="qs3-jM-eIl" secondAttribute="leading" constant="20" id="9fV-YD-Trb"/>
+                            <constraint firstItem="qs3-jM-eIl" firstAttribute="trailing" secondItem="5U3-Ue-7y5" secondAttribute="trailing" constant="20" id="C9b-BA-X5e"/>
+                            <constraint firstItem="qs3-jM-eIl" firstAttribute="trailing" secondItem="SYw-Sh-XJD" secondAttribute="trailing" constant="20" id="CSe-0F-LSY"/>
+                            <constraint firstItem="SYw-Sh-XJD" firstAttribute="leading" secondItem="qs3-jM-eIl" secondAttribute="leading" constant="20" id="CpM-8i-Yd8"/>
+                            <constraint firstItem="SYw-Sh-XJD" firstAttribute="top" secondItem="5U3-Ue-7y5" secondAttribute="bottom" constant="8" id="G98-Ut-jwU"/>
+                            <constraint firstItem="5U3-Ue-7y5" firstAttribute="top" secondItem="qs3-jM-eIl" secondAttribute="top" constant="128" id="HTm-ia-ocs"/>
+                            <constraint firstItem="qs3-jM-eIl" firstAttribute="bottom" secondItem="cbP-8t-Pqy" secondAttribute="bottom" constant="20" id="Tno-aE-wCi"/>
+                            <constraint firstItem="Sw4-Rs-f4D" firstAttribute="leading" secondItem="qs3-jM-eIl" secondAttribute="leading" constant="20" id="VQe-F2-f9t"/>
+                            <constraint firstItem="qs3-jM-eIl" firstAttribute="trailing" secondItem="cbP-8t-Pqy" secondAttribute="trailing" constant="80" id="Yqf-dc-vPm"/>
+                            <constraint firstItem="qs3-jM-eIl" firstAttribute="trailing" secondItem="Sw4-Rs-f4D" secondAttribute="trailing" constant="20" id="mKb-KT-wP7"/>
+                            <constraint firstItem="Sw4-Rs-f4D" firstAttribute="top" secondItem="qs3-jM-eIl" secondAttribute="top" constant="20" id="qbH-ja-9qo"/>
+                            <constraint firstItem="5U3-Ue-7y5" firstAttribute="leading" secondItem="qs3-jM-eIl" secondAttribute="leading" constant="20" id="vdp-Iq-U1A"/>
+                            <constraint firstItem="cbP-8t-Pqy" firstAttribute="top" secondItem="SYw-Sh-XJD" secondAttribute="bottom" constant="8" id="yoE-Nf-3LW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qs3-jM-eIl"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Translate" image="doc.richtext" catalog="system" selectedImage="doc.richtext" id="GkN-ge-6be"/>
+                    <connections>
+                        <outlet property="responseView" destination="SYw-Sh-XJD" id="6qS-bq-e0p"/>
+                        <outlet property="searchView" destination="5U3-Ue-7y5" id="S3I-XI-Kne"/>
+                        <outlet property="titleView" destination="Sw4-Rs-f4D" id="mC5-d3-Ibz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6B4-Vh-t5x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-944.92753623188412" y="1074.1071428571429"/>
         </scene>
         <!--Cjtn Detail View Controller-->
         <scene sceneID="Clj-4e-m18">
@@ -544,6 +616,7 @@
     </scenes>
     <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>
+        <image name="doc.richtext" catalog="system" width="115" height="128"/>
         <image name="list.bullet" catalog="system" width="128" height="88"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
     </resources>

@@ -45,7 +45,7 @@ class TenseCVDS: NSObject, UICollectionViewDelegate, UICollectionViewDataSource 
         if indexPath.row == collectionView.indexPathsForSelectedItems?[0][1] ?? -1 {
             label.textColor = collectionView.tintColor
         } else {
-            label.textColor = UIColor.black
+            label.textColor = UIColor.label
         }
         return cell
     }
@@ -63,7 +63,7 @@ class TenseCVDS: NSObject, UICollectionViewDelegate, UICollectionViewDataSource 
         guard let cell = collectionView.cellForItem(at: indexPath) as? TenseCellView else {
             return
         }
-        cell.label?.textColor = UIColor.black
+        cell.label?.textColor = UIColor.label
     }
 
 }

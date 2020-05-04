@@ -34,6 +34,7 @@ class ViewController: UIViewController {
             print(word)
         } else {
             // If there is a conjugations plist, upload to core data.
+            print("Polulating Conjugations")
             if let path = Bundle.main.path(forResource: "conjugations", ofType: "plist"),
                 let cjtns = NSArray(contentsOfFile: path){
                 
