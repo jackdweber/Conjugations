@@ -19,7 +19,18 @@
         <attribute name="tense_en" optional="YES" attributeType="String"/>
         <attribute name="verb_en" optional="YES" attributeType="String"/>
     </entity>
+    <entity name="StudyItem" representedClassName="StudyItem" syncable="YES" codeGenerationType="class">
+        <attribute name="en" optional="YES" attributeType="String"/>
+        <attribute name="es" optional="YES" attributeType="String"/>
+        <relationship name="set" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="StudySet" inverseName="items" inverseEntity="StudySet"/>
+    </entity>
+    <entity name="StudySet" representedClassName="StudySet" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="items" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="StudyItem" inverseName="set" inverseEntity="StudyItem"/>
+    </entity>
     <elements>
         <element name="Conjugation" positionX="-63" positionY="-18" width="128" height="298"/>
+        <element name="StudySet" positionX="295.80859375" positionY="-43.0625" width="128" height="73"/>
+        <element name="StudyItem" positionX="298.6171875" positionY="207.6875" width="128" height="88"/>
     </elements>
 </model>

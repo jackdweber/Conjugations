@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class StudySet: NSObject {
+class StudySetManager: NSObject {
     var verbs: [String] = []
     let context: NSManagedObjectContext
     
