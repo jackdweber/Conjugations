@@ -70,7 +70,7 @@ class CjtnListViewController: UIViewController {
     
     func search(text: String) {
         if text != "" {
-            self.predicate = NSPredicate(format: "mood_en MATCHES[c] 'indicative' AND tense_en MATCHES[c] 'present' AND (infinitive CONTAINS[c] %@ OR infinitive_en CONTAINS[c] %@)", text, text)
+            self.predicate = NSPredicate(format: "mood_en MATCHES[c] 'indicative' AND tense_en MATCHES[c] 'present' AND (infinitive MATCHES[c] %@ OR infinitive_en MATCHES[c] %@)", "^\(text).*$", "^\(text).*$")
         } else {
             self.predicate = NSPredicate(format: "mood_en MATCHES[c] 'indicative' AND tense_en MATCHES[c] 'present'", [])
         }
