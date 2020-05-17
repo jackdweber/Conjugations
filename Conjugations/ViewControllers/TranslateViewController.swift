@@ -11,7 +11,6 @@ import UIKit
 class TranslateViewController: UIViewController {
 
     @IBOutlet weak var searchView: UITextField!
-    @IBOutlet weak var titleView: UILabel!
     @IBOutlet weak var responseView: UITextView!
     
     let searchViewTopStart = CGFloat(128)
@@ -26,7 +25,6 @@ class TranslateViewController: UIViewController {
         
         // Initial constaints
         searchView.translatesAutoresizingMaskIntoConstraints = false
-        titleView.translatesAutoresizingMaskIntoConstraints = false
         
         constraints.append(self.searchView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: self.view.frame.height / 2 - self.searchView.frame.height / 2))
         
