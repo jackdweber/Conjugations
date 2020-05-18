@@ -237,14 +237,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Palabra" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5U3-Ue-7y5">
-                                <rect key="frame" x="20" y="166.5" width="374" height="52.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="yes" returnKeyType="done"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="gOh-FE-ggi">
+                                <rect key="frame" x="20" y="158.5" width="374" height="32"/>
+                                <segments>
+                                    <segment title="Spanish to English"/>
+                                    <segment title="English to Spanish"/>
+                                </segments>
                                 <connections>
-                                    <action selector="textChange:" destination="6ir-Uw-uEj" eventType="editingChanged" id="YSe-d1-UBe"/>
+                                    <action selector="didswitch:" destination="6ir-Uw-uEj" eventType="valueChanged" id="iv8-9n-5Xc"/>
                                 </connections>
-                            </textField>
+                            </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbP-8t-Pqy">
                                 <rect key="frame" x="20" y="752" width="314" height="41"/>
                                 <string key="text" base64-UTF8="YES">
@@ -254,33 +256,46 @@ VHJhbnNsYXRpb24gcHJvdmlkZWQgYnnigKhNaWNyb3NvZnQgQXp1cmUgVHJhbnNsYXRlIAPCrg
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SYw-Sh-XJD">
-                                <rect key="frame" x="20" y="227" width="374" height="517"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ns4-nb-j7S">
+                                <rect key="frame" x="20" y="197.5" width="374" height="546.5"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Hola el mundo!" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JtD-e8-v5B">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="273.5"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5VT-Kw-Nc0">
+                                        <rect key="frame" x="0.0" y="273.5" width="374" height="273"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="cbP-8t-Pqy" firstAttribute="top" secondItem="ns4-nb-j7S" secondAttribute="bottom" constant="8" id="4f0-J9-GkG"/>
                             <constraint firstItem="cbP-8t-Pqy" firstAttribute="leading" secondItem="qs3-jM-eIl" secondAttribute="leading" constant="20" id="9fV-YD-Trb"/>
-                            <constraint firstItem="qs3-jM-eIl" firstAttribute="trailing" secondItem="5U3-Ue-7y5" secondAttribute="trailing" constant="20" id="C9b-BA-X5e"/>
-                            <constraint firstItem="qs3-jM-eIl" firstAttribute="trailing" secondItem="SYw-Sh-XJD" secondAttribute="trailing" constant="20" id="CSe-0F-LSY"/>
-                            <constraint firstItem="SYw-Sh-XJD" firstAttribute="leading" secondItem="qs3-jM-eIl" secondAttribute="leading" constant="20" id="CpM-8i-Yd8"/>
-                            <constraint firstItem="SYw-Sh-XJD" firstAttribute="top" secondItem="5U3-Ue-7y5" secondAttribute="bottom" constant="8" id="G98-Ut-jwU"/>
-                            <constraint firstItem="5U3-Ue-7y5" firstAttribute="top" secondItem="qs3-jM-eIl" secondAttribute="top" constant="8" id="HTm-ia-ocs"/>
+                            <constraint firstItem="qs3-jM-eIl" firstAttribute="trailing" secondItem="ns4-nb-j7S" secondAttribute="trailing" constant="20" id="Bdp-zx-JJl"/>
+                            <constraint firstItem="ns4-nb-j7S" firstAttribute="top" secondItem="gOh-FE-ggi" secondAttribute="bottom" constant="8" id="E30-nS-cvc"/>
                             <constraint firstItem="qs3-jM-eIl" firstAttribute="bottom" secondItem="cbP-8t-Pqy" secondAttribute="bottom" constant="20" id="Tno-aE-wCi"/>
+                            <constraint firstItem="qs3-jM-eIl" firstAttribute="trailing" secondItem="gOh-FE-ggi" secondAttribute="trailing" constant="20" id="WDD-ej-VnP"/>
                             <constraint firstItem="qs3-jM-eIl" firstAttribute="trailing" secondItem="cbP-8t-Pqy" secondAttribute="trailing" constant="80" id="Yqf-dc-vPm"/>
-                            <constraint firstItem="5U3-Ue-7y5" firstAttribute="leading" secondItem="qs3-jM-eIl" secondAttribute="leading" constant="20" id="vdp-Iq-U1A"/>
-                            <constraint firstItem="cbP-8t-Pqy" firstAttribute="top" secondItem="SYw-Sh-XJD" secondAttribute="bottom" constant="8" id="yoE-Nf-3LW"/>
+                            <constraint firstItem="gOh-FE-ggi" firstAttribute="top" secondItem="qs3-jM-eIl" secondAttribute="top" id="ltJ-84-swh"/>
+                            <constraint firstItem="ns4-nb-j7S" firstAttribute="leading" secondItem="qs3-jM-eIl" secondAttribute="leading" constant="20" id="riR-Cq-zL1"/>
+                            <constraint firstItem="gOh-FE-ggi" firstAttribute="leading" secondItem="qs3-jM-eIl" secondAttribute="leading" constant="20" id="yiU-uz-xb5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qs3-jM-eIl"/>
                     </view>
                     <navigationItem key="navigationItem" title="Translate" largeTitleDisplayMode="always" id="I2m-xj-VGq"/>
                     <connections>
-                        <outlet property="responseView" destination="SYw-Sh-XJD" id="6qS-bq-e0p"/>
-                        <outlet property="searchView" destination="5U3-Ue-7y5" id="S3I-XI-Kne"/>
+                        <outlet property="responseView" destination="5VT-Kw-Nc0" id="eSf-qD-BZm"/>
+                        <outlet property="segmentView" destination="gOh-FE-ggi" id="HZY-GE-HVe"/>
+                        <outlet property="sourceView" destination="JtD-e8-v5B" id="kAL-yo-kUc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6B4-Vh-t5x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -671,7 +686,9 @@ VHJhbnNsYXRpb24gcHJvdmlkZWQgYnnigKhNaWNyb3NvZnQgQXp1cmUgVHJhbnNsYXRlIAPCrg
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="91n-Ht-nym"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Study" largeTitleDisplayMode="always" id="0F1-vQ-4RG"/>
+                    <navigationItem key="navigationItem" title="Study" largeTitleDisplayMode="always" id="0F1-vQ-4RG">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="hvG-5N-tbB"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="Q6i-A6-BFA" id="ruX-eZ-ecs"/>
                         <outlet property="segmentsView" destination="ksN-S2-6uz" id="3Og-vX-0IU"/>

@@ -13,14 +13,14 @@ class Translate: NSObject {
     // Code used found in azure examples github
     // https://github.com/MicrosoftTranslator/Text-Translation-API-App-V3-IOS
 
-    static func translate(phrase: String, completion: @escaping (_ status: Bool, _ result: String) -> Void) {
+    static func translate(phrase: String, linguas: String, completion: @escaping (_ status: Bool, _ result: String) -> Void) {
         let azureKey = "cc8405bdf183479dbe2ac0f61aadf5da"
             
         let contentType = "application/json"
         let traceID = UUID().uuidString
         print("Creating request with trace \(traceID)")
         //let apiURL = "https://dev.microsofttranslator.com/translate?api-version=3.0&from=en&to=es"
-        let apiURL = "https://api.cognitive.microsofttranslator.com/translate?api-version=3.0&to=en&from=es"
+        let apiURL = "https://api.cognitive.microsofttranslator.com/translate?api-version=3.0&" + linguas
         
         struct encodeText: Codable {
             var text = String()
