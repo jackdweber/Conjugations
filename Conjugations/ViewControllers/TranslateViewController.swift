@@ -10,7 +10,6 @@ import UIKit
 
 class TranslateViewController: UIViewController {
 
-    @IBOutlet weak var searchView: UITextField!
     @IBOutlet weak var responseView: UITextView!
     @IBOutlet weak var sourceView: UITextView!
     @IBOutlet weak var segmentView: UISegmentedControl!
@@ -59,10 +58,11 @@ class TranslateViewController: UIViewController {
     @IBAction func didswitch(_ sender: Any) {
         if sourceView.text != placeholder_en && sourceView.text != placeholder_es {
             sourceView.text = responseView.text
-            translate(text: sourceView.text)
         } else {
+            sourceView.text = ""
             textViewDidEndEditing(sourceView)
         }
+        translate(text: sourceView.text)
     }
 }
 

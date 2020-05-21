@@ -20,7 +20,7 @@ class StudyViewController: UIViewController {
     
     private var sets: [StudySet] = []
     private let fakeContext = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
-    private var addSet: StudySet = StudySet()
+    private var addSet: StudySet? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +29,7 @@ class StudyViewController: UIViewController {
         collectionView.dataSource = self
         
         addSet = StudySet(context: fakeContext)
-        addSet.name = "Add Set"
+        addSet!.name = "Add Set"
         
         loadData()
     }
@@ -47,7 +47,7 @@ class StudyViewController: UIViewController {
                 })
             }
             DispatchQueue.main.async {
-                self.sets.insert(self.addSet, at: 0)
+                self.sets.insert(self.addSet!, at: 0)
                 self.collectionView.reloadData()
             }
         } else {
