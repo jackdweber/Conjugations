@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class StudySetCell: UICollectionViewCell {
     var label: UILabel?
@@ -18,12 +19,17 @@ class StudyViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     private var sets: [StudySet] = []
+    private let fakeContext = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
+    private var addSet: StudySet = StudySet()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         collectionView.delegate = self
         collectionView.dataSource = self
+        
+        addSet = StudySet(context: fakeContext)
+        addSet.name = "Add Set"
         
         loadData()
     }
@@ -33,15 +39,25 @@ class StudyViewController: UIViewController {
             return
         }
         let context = ad.persistentContainer.viewContext
-        
-        DispatchQueue.global(qos: .userInitiated).async {
-            if let res = CoreDataUtils.fetchSets(predicate: nil, context: context){
+        self.sets = []
+        if self.segmentsView.selectedSegmentIndex > 0 {
+            if let res = CoreDataUtils.fetchCustomSets(context: context){
                 self.sets = res.sorted(by: { (s1, s2) -> Bool in
                     return s1.name!.lowercased() < s2.name!.lowercased()
                 })
-                DispatchQueue.main.async {
-                    self.collectionView.reloadData()
-                }
+            }
+            DispatchQueue.main.async {
+                self.sets.insert(self.addSet, at: 0)
+                self.collectionView.reloadData()
+            }
+        } else {
+            if let res = CoreDataUtils.fetchFeaturedSets(context: context){
+                self.sets = res.sorted(by: { (s1, s2) -> Bool in
+                    return s1.name!.lowercased() < s2.name!.lowercased()
+                })
+            }
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
             }
         }
     }
@@ -66,6 +82,7 @@ class StudyViewController: UIViewController {
             self.collectionView.alpha = 0.0
         }, completion: { (_) in
             DispatchQueue.main.async {
+                self.loadData()
                 self.collectionView.collectionViewLayout.invalidateLayout()
                 if let l = self.collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
                     if sender.selectedSegmentIndex > 0 {
@@ -125,6 +142,9 @@ extension StudyViewController: UICollectionViewDelegate, UICollectionViewDataSou
         }
         
         cell.contentView.backgroundColor = view.tintColor
+        if self.segmentsView.selectedSegmentIndex > 0 && indexPath.row == 0 {
+            cell.contentView.backgroundColor = UIColor.systemBlue
+        }
         cell.contentView.layer.cornerRadius = 5
         
         // Initialize label

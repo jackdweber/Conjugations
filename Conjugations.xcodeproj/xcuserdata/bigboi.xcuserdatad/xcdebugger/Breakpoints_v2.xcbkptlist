@@ -94,10 +94,42 @@
             filePath = "Conjugations/ViewControllers/StudyViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
             landmarkName = "switchSegment(_:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0312530B-304D-4D2F-83EE-E382D660DCA0 - 9337b346f4da0b7f"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Bool) -&gt; () in Conjugations.StudyViewController.switchSegment(__C.UISegmentedControl) -&gt; ()"
+                  moduleName = "Conjugations"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bigboi/Desktop/Conjugations/Conjugations/ViewControllers/StudyViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "158">
+               </Location>
+               <Location
+                  uuid = "0312530B-304D-4D2F-83EE-E382D660DCA0 - 215911baa88c6c48"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #2 (Swift.Bool) -&gt; () in Conjugations.StudyViewController.switchSegment(__C.UISegmentedControl) -&gt; ()"
+                  moduleName = "Conjugations"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bigboi/Desktop/Conjugations/Conjugations/ViewControllers/StudyViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "114">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

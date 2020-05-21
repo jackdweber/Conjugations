@@ -56,4 +56,14 @@ class CoreDataUtils: NSObject {
             return nil
         }
     }
+    
+    static func fetchFeaturedSets(context: NSManagedObjectContext) -> [StudySet]? {
+        let p = NSPredicate(format: "feature == YES", [])
+        return fetchSets(predicate: p, context: context)
+    }
+    
+    static func fetchCustomSets(context: NSManagedObjectContext) -> [StudySet]? {
+        let p = NSPredicate(format: "feature != YES OR feature = nil", [])
+        return fetchSets(predicate: p, context: context)
+    }
 }

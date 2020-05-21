@@ -243,9 +243,6 @@
                                     <segment title="Spanish to English"/>
                                     <segment title="English to Spanish"/>
                                 </segments>
-                                <connections>
-                                    <action selector="didswitch:" destination="6ir-Uw-uEj" eventType="valueChanged" id="iv8-9n-5Xc"/>
-                                </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbP-8t-Pqy">
                                 <rect key="frame" x="20" y="752" width="314" height="41"/>
@@ -264,9 +261,9 @@ VHJhbnNsYXRpb24gcHJvdmlkZWQgYnnigKhNaWNyb3NvZnQgQXp1cmUgVHJhbnNsYXRlIAPCrg
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5VT-Kw-Nc0">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Hello World!" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5VT-Kw-Nc0">
                                         <rect key="frame" x="0.0" y="273.5" width="374" height="273"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -292,11 +289,6 @@ VHJhbnNsYXRpb24gcHJvdmlkZWQgYnnigKhNaWNyb3NvZnQgQXp1cmUgVHJhbnNsYXRlIAPCrg
                         <viewLayoutGuide key="safeArea" id="qs3-jM-eIl"/>
                     </view>
                     <navigationItem key="navigationItem" title="Translate" largeTitleDisplayMode="always" id="I2m-xj-VGq"/>
-                    <connections>
-                        <outlet property="responseView" destination="5VT-Kw-Nc0" id="eSf-qD-BZm"/>
-                        <outlet property="segmentView" destination="gOh-FE-ggi" id="HZY-GE-HVe"/>
-                        <outlet property="sourceView" destination="JtD-e8-v5B" id="kAL-yo-kUc"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6B4-Vh-t5x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -686,9 +678,7 @@ VHJhbnNsYXRpb24gcHJvdmlkZWQgYnnigKhNaWNyb3NvZnQgQXp1cmUgVHJhbnNsYXRlIAPCrg
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="91n-Ht-nym"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Study" largeTitleDisplayMode="always" id="0F1-vQ-4RG">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="hvG-5N-tbB"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Study" largeTitleDisplayMode="always" id="0F1-vQ-4RG"/>
                     <connections>
                         <outlet property="collectionView" destination="Q6i-A6-BFA" id="ruX-eZ-ecs"/>
                         <outlet property="segmentsView" destination="ksN-S2-6uz" id="3Og-vX-0IU"/>
