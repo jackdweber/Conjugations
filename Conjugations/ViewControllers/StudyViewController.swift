@@ -11,6 +11,7 @@ import CoreData
 
 class StudySetCell: UICollectionViewCell {
     var label: UILabel?
+    var button: UIButton?
 }
 
 class StudyViewController: UIViewController {
@@ -99,7 +100,7 @@ class StudyViewController: UIViewController {
         })
     }
     
-    @IBAction func addStudySet(_ sender: Any) {
+    @objc func addStudySet() {
         let alert = UIAlertController(title: "New Study Set", message: "Please add a title", preferredStyle: .alert)
         
         alert.addTextField(configurationHandler: nil)
@@ -142,9 +143,6 @@ extension StudyViewController: UICollectionViewDelegate, UICollectionViewDataSou
         }
         
         cell.contentView.backgroundColor = view.tintColor
-        if self.segmentsView.selectedSegmentIndex > 0 && indexPath.row == 0 {
-            cell.contentView.backgroundColor = UIColor.systemBlue
-        }
         cell.contentView.layer.cornerRadius = 5
         
         // Initialize label
@@ -153,12 +151,38 @@ extension StudyViewController: UICollectionViewDelegate, UICollectionViewDataSou
         label.translatesAutoresizingMaskIntoConstraints = false
         cell.contentView.addSubview(label)
         NSLayoutConstraint.activate([
-            label.topAnchor.constraint(equalTo: cell.contentView.topAnchor, constant: 8),
-            label.centerXAnchor.constraint(equalTo: cell.contentView.centerXAnchor)
+            label.topAnchor.constraint(equalTo: cell.contentView.topAnchor, constant: 0),
+            label.bottomAnchor.constraint(equalTo: cell.contentView.bottomAnchor, constant: 0),
+            label.leadingAnchor.constraint(equalTo: cell.contentView.leadingAnchor, constant: 0),
+            label.trailingAnchor.constraint(equalTo: cell.contentView.trailingAnchor, constant: 0)
         ])
         label.font = UIFont.systemFont(ofSize: 20)
         label.text = sets[indexPath.row].name
-        label.textColor = UIColor.label
+        label.textColor = UIColor.white
+        label.textAlignment = NSTextAlignment.center
+        
+        // If it is an "Add set button"
+        if self.segmentsView.selectedSegmentIndex > 0 && indexPath.row == 0 {
+            cell.contentView.backgroundColor = UIColor.systemBlue
+            cell.label?.isHidden = true
+            cell.button?.isHidden = false
+            let button = cell.button ?? UIButton()
+            button.translatesAutoresizingMaskIntoConstraints = false
+            cell.contentView.addSubview(button)
+            button.setTitle("Add Set", for: .normal)
+            button.tintColor = UIColor.white
+            NSLayoutConstraint.activate([
+                button.topAnchor.constraint(equalTo: cell.contentView.topAnchor, constant: 0),
+                button.bottomAnchor.constraint(equalTo: cell.contentView.bottomAnchor, constant: 0),
+                button.leadingAnchor.constraint(equalTo: cell.contentView.leadingAnchor, constant: 0),
+                button.trailingAnchor.constraint(equalTo: cell.contentView.trailingAnchor, constant: 0)
+            ])
+            button.addTarget(self, action: #selector(addStudySet), for: .touchUpInside)
+            cell.button = button
+        } else {
+            cell.button?.isHidden = true
+            cell.label?.isHidden = false
+        }
     
         return cell
     }
