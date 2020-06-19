@@ -20,6 +20,7 @@ class CjtnListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Verbs"
+        self.extendedLayoutIncludesOpaqueBars = true
         tableView.delegate = self
         tableView.dataSource = self
         searchBar.delegate = self

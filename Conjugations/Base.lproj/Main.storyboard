@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -119,11 +119,11 @@
             <objects>
                 <viewController id="Kb2-dL-dFb" customClass="CjtnListViewController" customModule="Conjugations" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ovc-Fh-Y8o">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="29" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="N2o-ih-Oxu">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="uFI-at-pZv">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -131,7 +131,7 @@
                                     <subviews>
                                         <searchBar contentMode="redraw" fixedFrame="YES" searchBarStyle="minimal" text="" placeholder="Buscar" translatesAutoresizingMaskIntoConstraints="NO" id="35j-QB-E16">
                                             <rect key="frame" x="8" y="0.0" width="398" height="44"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                             <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                         </searchBar>
                                     </subviews>
@@ -167,7 +167,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="N2o-ih-Oxu" firstAttribute="top" secondItem="bd9-uh-caf" secondAttribute="top" id="Ut3-Wu-mfR"/>
+                            <constraint firstItem="N2o-ih-Oxu" firstAttribute="top" secondItem="ovc-Fh-Y8o" secondAttribute="top" id="YTc-DT-4MI"/>
                             <constraint firstItem="N2o-ih-Oxu" firstAttribute="leading" secondItem="bd9-uh-caf" secondAttribute="leading" id="e6K-dD-vj0"/>
                             <constraint firstAttribute="trailing" secondItem="N2o-ih-Oxu" secondAttribute="trailing" id="iKc-xq-VMj"/>
                             <constraint firstItem="N2o-ih-Oxu" firstAttribute="bottom" secondItem="bd9-uh-caf" secondAttribute="bottom" id="oLM-Hu-ycO"/>
@@ -213,7 +213,7 @@
                     <tabBarItem key="tabBarItem" title="Verbs" image="list.bullet" catalog="system" id="Bl1-np-jgu"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="paB-56-19c"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Uio-RE-tcA">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="Uio-RE-tcA">
                         <rect key="frame" x="0.0" y="44" width="414" height="114.5"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="largeTitleTextAttributes">
