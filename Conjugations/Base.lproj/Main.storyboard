@@ -690,11 +690,28 @@ VHJhbnNsYXRpb24gcHJvdmlkZWQgYnnigKhNaWNyb3NvZnQgQXp1cmUgVHJhbnNsYXRlIAPCrg
                     <connections>
                         <outlet property="collectionView" destination="Q6i-A6-BFA" id="ruX-eZ-ecs"/>
                         <outlet property="segmentsView" destination="ksN-S2-6uz" id="3Og-vX-0IU"/>
+                        <segue destination="Mc9-uO-3e2" kind="show" identifier="ShowSetSegue" id="1wV-nN-oYH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hnJ-bA-5bf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="115.94202898550725" y="-477.45535714285711"/>
+        </scene>
+        <!--Set-->
+        <scene sceneID="aSP-6O-juk">
+            <objects>
+                <viewController id="Mc9-uO-3e2" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TSQ-HP-lKC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Esc-n6-OIu"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Set" largeTitleDisplayMode="never" id="qLt-f2-JZ6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EfF-Mw-3j8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1212" y="-710"/>
         </scene>
         <!--Translate-->
         <scene sceneID="fU6-6d-pZG">
