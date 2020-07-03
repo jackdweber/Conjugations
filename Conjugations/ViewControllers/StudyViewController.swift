@@ -19,6 +19,7 @@ class StudyViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     private var sets: [StudySet] = []
+    private var viewSetIndex = 1
     private let fakeContext = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
     private var addSet: StudySet? = nil
     
@@ -122,8 +123,17 @@ class StudyViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
-    @objc func viewStudySet(){
+    @objc func viewStudySet(sender: UIButton){
+        viewSetIndex = sender.tag
         self.performSegue(withIdentifier: "ShowSetSegue", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let set = sets[viewSetIndex]
+        if segue.destination is SetViewController{
+            let vc = segue.destination as? SetViewController
+            vc?.set = set
+        }
     }
 }
 
@@ -171,6 +181,7 @@ extension StudyViewController: UICollectionViewDelegate, UICollectionViewDataSou
             label.setTitle("Add Set", for: .normal)
             label.addTarget(self, action: #selector(addStudySet), for: .touchUpInside)
         } else {
+            label.tag = indexPath.row
             label.addTarget(self, action: #selector(viewStudySet), for: .touchUpInside)
         }
     
