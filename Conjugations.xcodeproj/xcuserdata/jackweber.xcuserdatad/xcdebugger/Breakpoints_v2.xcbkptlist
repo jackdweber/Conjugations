@@ -112,7 +112,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "59"
             endingLineNumber = "59"
-            landmarkName = "translate(phrase:completion:)"
+            landmarkName = "translate(phrase:linguas:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -247,27 +247,24 @@
                                     <action selector="didswitch:" destination="6ir-Uw-uEj" eventType="valueChanged" id="BwJ-Na-2qu"/>
                                 </connections>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbP-8t-Pqy">
-                                <rect key="frame" x="20" y="752" width="314" height="41"/>
-                                <string key="text" base64-UTF8="YES">
-VHJhbnNsYXRpb24gcHJvdmlkZWQgYnnigKhNaWNyb3NvZnQgQXp1cmUgVHJhbnNsYXRlIAPCrg
-</string>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbP-8t-Pqy">
+                                <rect key="frame" x="20" y="793" width="314" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ns4-nb-j7S">
-                                <rect key="frame" x="20" y="197.5" width="374" height="546.5"/>
+                                <rect key="frame" x="20" y="197.5" width="374" height="587.5"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Hola el mundo!" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JtD-e8-v5B">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="273.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="294"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Hello World!" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5VT-Kw-Nc0">
-                                        <rect key="frame" x="0.0" y="273.5" width="374" height="273"/>
+                                        <rect key="frame" x="0.0" y="294" width="374" height="293.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -705,25 +702,62 @@ VHJhbnNsYXRpb24gcHJvdmlkZWQgYnnigKhNaWNyb3NvZnQgQXp1cmUgVHJhbnNsYXRlIAPCrg
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3K0-qV-Ucm">
-                                <rect key="frame" x="108" y="214" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3K0-qV-Ucm">
+                                <rect key="frame" x="20" y="98" width="374" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N6J-Wo-MDF">
+                                <rect key="frame" x="20" y="298" width="374" height="300"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="TxE-1t-S9C"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <color key="tintColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="cardButtonAction:" destination="Mc9-uO-3e2" eventType="touchUpInside" id="xb9-eG-RQV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="Esc-n6-OIu" firstAttribute="trailing" secondItem="3K0-qV-Ucm" secondAttribute="trailing" constant="20" id="4IF-pF-60M"/>
+                            <constraint firstItem="3K0-qV-Ucm" firstAttribute="leading" secondItem="Esc-n6-OIu" secondAttribute="leading" constant="20" id="Exl-Mg-SV4"/>
+                            <constraint firstItem="N6J-Wo-MDF" firstAttribute="centerY" secondItem="TSQ-HP-lKC" secondAttribute="centerY" id="Qsk-AH-3Q1"/>
+                            <constraint firstItem="3K0-qV-Ucm" firstAttribute="top" secondItem="Esc-n6-OIu" secondAttribute="top" constant="10" id="cbW-4o-PMy"/>
+                            <constraint firstItem="Esc-n6-OIu" firstAttribute="trailing" secondItem="N6J-Wo-MDF" secondAttribute="trailing" constant="20" id="ljR-Vx-p6P"/>
+                            <constraint firstItem="N6J-Wo-MDF" firstAttribute="leading" secondItem="Esc-n6-OIu" secondAttribute="leading" constant="20" id="rEb-if-Fgu"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Esc-n6-OIu"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="dzZ-Pv-z9I" appends="YES" id="Cny-3T-Vwi"/>
+                        </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="Set" largeTitleDisplayMode="never" id="qLt-f2-JZ6"/>
+                    <navigationItem key="navigationItem" title="Set" largeTitleDisplayMode="never" id="qLt-f2-JZ6">
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="Woe-Z4-y4p"/>
+                    </navigationItem>
                     <connections>
+                        <outlet property="cardButton" destination="N6J-Wo-MDF" id="uir-7P-Otb"/>
                         <outlet property="titleLabel" destination="3K0-qV-Ucm" id="kOa-pn-UFS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EfF-Mw-3j8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="7Pa-79-aBp">
+                    <connections>
+                        <action selector="swipeRight:" destination="Mc9-uO-3e2" id="1TO-tD-0Hr"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="dzZ-Pv-z9I">
+                    <connections>
+                        <action selector="swipeLeft:" destination="Mc9-uO-3e2" id="Zkh-xj-28z"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1212" y="-710"/>
+            <point key="canvasLocation" x="1229" y="-477"/>
         </scene>
         <!--Translate-->
         <scene sceneID="fU6-6d-pZG">

@@ -10,12 +10,14 @@ import UIKit
 import CoreData
 
 class StudySetManager: NSObject {
-    var verbs: [String] = []
-    let context: NSManagedObjectContext
+    var set: StudySet
     
-    init(context: NSManagedObjectContext, name: String? = nil, random: Bool = false) {
-        self.context = context
+    init(set: StudySet, random: Bool = false) {
+        self.set = set
     }
     
+    func getRandomList() -> [StudyItem] {
+        return [set.items!]
+    }
     
 }
